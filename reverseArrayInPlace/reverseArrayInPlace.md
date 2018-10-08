@@ -56,11 +56,15 @@
     for (let i = 0; i < arr.length / 2; i++) {
 
     let tempVar = arr[i];
+
     arr[i] = arr[arr.length - 1 - i];
+
     arr[arr.length - 1 - i] = tempVar;
+
     }
 
     return arr;
+
     }
 
     let words = ['the', 'cow', 'jumped', 'over', 'the', 'moon'];
@@ -71,6 +75,7 @@
 
     function capitalizeFirstLetter(newWords) {
     return newWords.charAt(0).toUpperCase() + newWords.slice(1);
+
     }
 
     console.log(capitalizeFirstLetter(newWords)); // Moon the over jumped cow the
