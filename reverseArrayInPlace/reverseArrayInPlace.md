@@ -74,6 +74,7 @@
     let newWords = newArrayInPlace.join(' ');
 
     function capitalizeFirstLetter(newWords) {
+
     return newWords.charAt(0).toUpperCase() + newWords.slice(1);
 
     }
