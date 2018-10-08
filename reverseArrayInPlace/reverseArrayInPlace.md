@@ -51,7 +51,7 @@
 
   /**************************************** */
 
-    function reverseArrayInPlace(arr) {```
+    function reverseArrayInPlace(arr) {
 
     for (let i = 0; i < arr.length / 2; i++) {
 
@@ -73,4 +73,4 @@
     return newWords.charAt(0).toUpperCase() + newWords.slice(1);
     }
 
-    console.log(capitalizeFirstLetter(newWords)); // Moon the over jumped cow the```
+    console.log(capitalizeFirstLetter(newWords)); // Moon the over jumped cow the
