@@ -88,3 +88,34 @@
     }
 
     console.log(capitalizeFirstLetter(newWords)); // Moon the over jumped cow the
+
+/*************condensed version*************/
+
+    function reverseArrayInPlace(arr) {
+
+	for (i = 0; i < arr.length / 2; i ++) {
+
+	var tempVar = arr[i];
+
+	arr[i] = arr[arr.length - 1 - i];
+
+	arr[arr.length - 1 - i] = tempVar;
+	}
+
+	return arr
+
+    }
+
+    var words = ['hello', 'world']
+
+
+    var newWords = (reverseArrayInPlace(words).join(' '));
+
+
+    function capitalizeFirstWord(newWords) {
+
+	return newWords.charAt(0).toUpperCase() + newWords.slice(1);
+
+    }
+
+    console.log(capitalizeFirstWord(newWords));
