@@ -4,13 +4,13 @@
 
     for (let i = 0; i < arr.length / 2; i++) {
 
+        // loop through first half of array (arr.length / 2;)
+
         // first we want to switch the first element of the array with the last element of the array, then we want to switch the second element of our array with the second to last element of the array.
 
         // Reason we divide by two is as we go through the first half of the array, we are correctly reassigning each element but then as we continue through the second half of the array we are switching every element back again ex. [1,2,3,4],[4,2,3,1],[4,3,2,1],[1,2,3,4]. That's why we go half way and divide by 2 [4,3,2,1].
 
     let tempVar = arr[i];
-
-        // loop through first half of array
 
         // declare and assign a temporary variable
 
