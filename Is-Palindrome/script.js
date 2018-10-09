@@ -19,7 +19,7 @@ function isPalindrome(string) { // takes in a string as a parameter // we ignore
                             // we need an array of every lowercase letter in the alphabet by defining array and
                                 // placing every letter in the alphabet in our array
 
-    var lettersArr = [];                       // we define a new letters array to place only the letters of our charactersArray
+    var lettersArr = []; // we define a new letters array to place only the letters of our charactersArray
 
     charactersArr.forEach(char => { // we will use forEach array helper method
 
