@@ -43,4 +43,24 @@ function reverseWords(string) { // define reverseWords as a function that takes 
 return reversedWordsArray.join(' '); // we want to return our final reversedWords array as a string and pass in a space character (' ')
 }
 
-console.log(reverseWords('this is a string of words'));
+console.log(reverseWords('this is a string of words')); // siht si a gnirts fo sdrow
+
+
+/**** Compressed version of Reverse Words Algorithm ****/
+
+function reverseWords(string) {
+    var wordsArr = string.split(' ');
+    var reversedWordsArr = [];
+
+    wordsArr.forEach(word => {
+    var reversedWord = '';
+    for (var i = word.length - 1; i >= 0; i--) {
+        reversedWord += word[i];
+    }
+    reversedWordsArr.push(reversedWord);
+});
+
+    return reversedWordsArr.join(' ');
+}
+
+reverseWords('this is a string of words');
