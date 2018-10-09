@@ -1,0 +1,47 @@
+[
+	{
+		"path": "$ROOTPATH$/reverseArrayInPlace/script.js",
+		"bookmarks": [
+			{
+				"line": 0,
+				"column": 0,
+				"label": ""
+			},
+			{
+				"line": 25,
+				"column": 0,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$/reverseWords/script.js",
+		"bookmarks": [
+			{
+				"line": 15,
+				"column": 0,
+				"label": ""
+			},
+			{
+				"line": 50,
+				"column": 0,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$/isPalindrome/script.js",
+		"bookmarks": [
+			{
+				"line": 9,
+				"column": 0,
+				"label": ""
+			},
+			{
+				"line": 48,
+				"column": 0,
+				"label": ""
+			}
+		]
+	}
+]

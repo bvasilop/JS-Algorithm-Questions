@@ -2,7 +2,7 @@
  * Reverse Words Algorithm
  */
 
- // Every word in the string should be reversed but the string as a whole should not be reversed
+// Every word in the string should be reversed but the string as a whole should not be reversed
     // ex. 'this is a strong of words' = siht si a gnirts fo sdrow' not 'sdrow fo gnirths a si siht'
 
 // Can't use array reverse method so we can solidify our skills with our array and string manipulation.
