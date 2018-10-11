@@ -29,7 +29,7 @@
 * The *original constructor object* is an instance of an even part of a bigger constructor with it's own properties.
 
 ### (The Object Object)
-* Each object that we create is an instance of the Object Constructor which inherits a bunch of methods from the Object Constructor's properties (prototype chain)
+* Each object that we create is an instance of the Object Constructor which inherits a bunch of methods from the Object Constructor's properties (prototype chain).
 
 * *Prototype chain:* Is what makes all of this inheritance possible. When we try to access a certain method or property on an object, JS will first try to find that method on that exact object. If it cannot be found,
 it will look in the Object's prototype, which is the prototype property of its parent (moving up in the chain) if method is still not there, it keeps going up the chain to find the method until there are no more
