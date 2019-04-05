@@ -9,21 +9,27 @@
 
 * Create an array of student ages that meet the legal drinking age.
 
-        const studentsAge = [17, 16, 18, 19, 21, 17];
-        const ableToDrink = studentsAge.filter( age => age > 18 );
+```javascript
+const studentsAge = [17, 16, 18, 19, 21, 17];
+const ableToDrink = studentsAge.filter( age => age > 18 );
 
-        // ableToDrink will be equal to [19, 21]
+// ableToDrink will be equal to [19, 21]
+```
+
 ## .map()
+
 * Creates a new array by manipulating the values in another array. Great for data manipulation and it is often used in React because it is an immutable method.
 
 ### Example
 
 * Create an array that adds a $ to the beginning of each number.
 
-        const numbers = [2, 3, 4, 5];
-        const dollars = numbers.map( number => '$' + number);
+```javascript
+const numbers = [2, 3, 4, 5];
+const dollars = numbers.map( number => '$' + number);
 
-        // dollars will be equal to ['$2', '$3', '$4', '$5']
+// dollars will be equal to ['$2', '$3', '$4', '$5']
+```
 
 ## .reduce()
 
@@ -33,10 +39,12 @@
 
 * Add up the integers in an array.
 
-        const numbers = [5, 10, 15];
-        const total = numbers.reduce( (accumulator, currentValue) => accumulator + currentValue);
+```javascript
+const numbers = [5, 10, 15];
+const total = numbers.reduce( (accumulator, currentValue) => accumulator + currentValue);
 
-        // total will be equal to 30
+// total will be equal to 30
+```
 
 * There are some really cool use cases for .reduce() outlined in the MDN docs that provide examples on how to do things likes flattening an array of arrays, grouping objects by a property, and removing duplicate items in array.
 
@@ -48,13 +56,15 @@
 
 * Log each array item to the console
 
-        const emotions = ['happy', 'sad', 'angry'];
-        emotions.forEach( emotion => console.log(emotion) );
+```javascript
+const emotions = ['happy', 'sad', 'angry'];
+emotions.forEach( emotion => console.log(emotion) );
 
-        // Will log the following:
-        // 'happy'
-        // 'sad'
-        // 'angry'
+// Will log the following:
+// 'happy'
+// 'sad'
+// 'angry'
+```
 
 ## .some()
 
@@ -65,11 +75,12 @@
 
 * Check if there is at least one 'admin' in an array.
 
-        const userPrivileges = ['user', 'user', 'user', 'admin'];
-        const containsAdmin = userPrivileges.some( element => element === 'admin');
+```javascript
+const userPrivileges = ['user', 'user', 'user', 'admin'];
+const containsAdmin = userPrivileges.some( element => element === 'admin');
 
-        // containsAdmin will be equal to true
-
+// containsAdmin will be equal to true
+```
 ## .every()
 
 * Similar to .some(), but checks if all items in an array pass a condition.
@@ -78,10 +89,12 @@
 
 * Check if all ratings are equal to or greater than 3 stars.
 
-        const ratings = [3, 5, 4, 3, 5];
-        const goodOverallRating = ratings.every( rating => rating >= 3 );
+```javascript
+const ratings = [3, 5, 4, 3, 5];
+const goodOverallRating = ratings.every( rating => rating >= 3 );
 
-        // goodOverallRating will be equal to true
+// goodOverallRating will be equal to true
+```
 
 ### .includes()
 
@@ -91,11 +104,12 @@
 
 * Check if the array includes an item with the string ‘waldo’.
 
-        const names = ['sophie', 'george', 'waldo', 'stephen', 'henry'];
-        const includesWaldo = names.includes('waldo');
+```javascript
+const names = ['sophie', 'george', 'waldo', 'stephen', 'henry'];
+const includesWaldo = names.includes('waldo');
 
-        // includesWaldo will be equal to true
-
+// includesWaldo will be equal to true
+```
 ## Array.from()
 
 * This is a static method that creates an array based on another array or string. You can also pass a map callback function as an argument to further shape the data in the new array. Honestly, I’m not too sure why someone would use this over the .map() method.
@@ -104,15 +118,18 @@
 
 * Create an array from a string.
 
-        const newArray = Array.from('hello');
+```javascript
+const newArray = Array.from('hello');
 
-        // newArray will be equal to ['h', 'e', 'l', 'l', 'o']
+// newArray will be equal to ['h', 'e', 'l', 'l', 'o']
 
 * Create an array that has double the value for each item in another array.
 
-        const doubledValues = Array.from([2, 4, 6], number => number * 2);
+```javascript
+const doubledValues = Array.from([2, 4, 6], number => number * 2);
 
-        // doubleValues will be equal to [4, 8, 12]
+// doubleValues will be equal to [4, 8, 12]
+```
 
 ## Object.values()
 
@@ -120,15 +137,17 @@
 
 ### Example
 
-    const icecreamColors = {
-    chocolate: 'brown',
-    vanilla: 'white',
-    strawberry: 'red',
-    }
+```javascript
+const icecreamColors = {
+chocolate: 'brown',
+vanilla: 'white',
+strawberry: 'red',
+};
 
-    const colors = Object.values(icecreamColors);
+const colors = Object.values(icecreamColors);
 
-    // colors will be equal to ["brown", "white", "red"]
+// colors will be equal to ["brown", "white", "red"]
+```
 
 ## Object.keys()
 
@@ -136,15 +155,17 @@
 
 ### Example
 
-    const icecreamColors = {
-    chocolate: 'brown',
-    vanilla: 'white',
-    strawberry: 'red',
-    }
+```javascript
+const icecreamColors = {
+chocolate: 'brown',
+vanilla: 'white',
+strawberry: 'red',
+};
 
-    const types = Object.keys(icecreamColors);
+const types = Object.keys(icecreamColors);
 
-    // types will be equal to ["chocolate", "vanilla", "strawberry"]
+// types will be equal to ["chocolate", "vanilla", "strawberry"]
+```
 
 ## Object.entries()
 
@@ -152,16 +173,18 @@
 
 ### Example
 
-    const weather = {
-    rain: 0,
-    temperature: 24,
-    humidity: 33,
-    }
+```javascript
+const weather = {
+rain: 0,
+temperature: 24,
+humidity: 33,
+};
 
-    const entries = Object.entries(weather);
+const entries = Object.entries(weather);
 
-    // entries will be equal to
-    // [['rain', 0], ['temperature', 24], ['humidity', 33]]
+// entries will be equal to
+// [['rain', 0], ['temperature', 24], ['humidity', 33]]
+```
 
 ## Array spread
 
@@ -171,19 +194,23 @@
 
 * Combine two arrays.
 
-        const spreadableOne = [1, 2, 3, 4];
-        const spreadableTwo = [5, 6, 7, 8];
+```javascript
+const spreadableOne = [1, 2, 3, 4];
+const spreadableTwo = [5, 6, 7, 8];
 
-        const combined = [...spreadableOne, ...spreadableTwo];
+const combined = [...spreadableOne, ...spreadableTwo];
 
-        // combined will be equal to [1, 2, 3, 4, 5, 6, 7, 8]
+// combined will be equal to [1, 2, 3, 4, 5, 6, 7, 8]
+```
 
 * Remove an array element without mutating the original array.
 
-        const animals = ['squirrel', 'bear', 'deer', 'salmon', 'rat'];
-        const mammals = [...animals.slice(0,3), ...animals.slice(4)];
+```javascript
+const animals = ['squirrel', 'bear', 'deer', 'salmon', 'rat'];
+const mammals = [...animals.slice(0,3), ...animals.slice(4)];
 
-        // mammals will be equal to ['squirrel', 'bear', 'deer', 'rat']
+// mammals will be equal to ['squirrel', 'bear', 'deer', 'rat']
+```
 
 ## Object spread
 Spreading an object allows for the addition of new properties and values to an object without mutations (i.e. a new object is created) and it can also be used to combine multiple objects together. It should be noted that spreading objects does not do nested copying.
@@ -192,18 +219,20 @@ Spreading an object allows for the addition of new properties and values to an o
 
 * Add a new object property and value without mutating the original object.
 
-        const spreadableObject = {
-        name: 'Robert',
-        phone: 'iPhone'
-        };
+```javascript
+const spreadableObject = {
+name: 'Robert',
+phone: 'iPhone'
+};
 
-        const newObject = {
-        ...spreadableObject,
-        carModel: 'Volkswagen'
-        }
+const newObject = {
+...spreadableObject,
+carModel: 'Volkswagen'
+};
 
-        // newObject will be equal to
-        // { carModel: 'Volkswagen', name: 'Robert', phone: 'iPhone' }
+// newObject will be equal to
+// { carModel: 'Volkswagen', name: 'Robert', phone: 'iPhone' }
+```
 
 ## Function Rest
 
@@ -213,13 +242,15 @@ Spreading an object allows for the addition of new properties and values to an o
 
 * Display the array of passed arguments.
 
-        function displayArgumentsArray(...theArguments) {
-        console.log(theArguments);
-        }
+```javascript
+function displayArgumentsArray(...theArguments) {
+console.log(theArguments);
+}
 
-        displayArgumentsArray('hi', 'there', 'bud');
+displayArgumentsArray('hi', 'there', 'bud');
 
-        // Will print ['hi', 'there', 'bud']
+// Will print ['hi', 'there', 'bud']
+```
 
 ## Object.freeze()
 
@@ -229,17 +260,19 @@ Spreading an object allows for the addition of new properties and values to an o
 
 * Freeze an object to prevent the name property from being changed.
 
-        const frozenObject = {
-        name: 'Robert'
-        }
-
+```javascript
+const frozenObject = {
+name: 'Robert'
+};
+```
 
 ## Object.freeze(frozenObject);
 
+```javascript
+frozenObject.name = 'Henry';
 
-        frozenObject.name = 'Henry';
-
-        // frozenObject will be equal to { name: 'Robert' }
+// frozenObject will be equal to { name: 'Robert' }
+```
 
 ## Object.seal()
 
@@ -249,16 +282,20 @@ Spreading an object allows for the addition of new properties and values to an o
 
 * Seal an object to prevent the wearsWatch property from being added.
 
-        const sealedObject = {
-        name: 'Robert'
-        }
+```javascript
+const sealedObject = {
+name: 'Robert'
+};
+```
 
 ## Object.seal(sealedObject);
 
-        sealedObject.name = 'Bob';
-        sealedObject.wearsWatch = true;
+```javascript
+sealedObject.name = 'Bob';
+sealedObject.wearsWatch = true;
 
-        // sealedObject will be equal to { name: 'Bob' }
+// sealedObject will be equal to { name: 'Bob' }
+```
 
 ## Object.assign()
 
@@ -268,14 +305,16 @@ Spreading an object allows for the addition of new properties and values to an o
 
 * Combine two objects into one.
 
-        const firstObject = {
-        firstName: 'Robert'
-        }
+```javascript
+const firstObject = {
+firstName: 'Robert'
+};
 
-        const secondObject = {
-        lastName: 'Cooper'
-        }
+const secondObject = {
+lastName: 'Cooper'
+};
 
-        const combinedObject = Object.assign(firstObject, secondObject);
+const combinedObject = Object.assign(firstObject, secondObject);
 
-        // combinedObject will be equal to { firstName: 'Robert', lastName: 'Cooper' }
+// combinedObject will be equal to { firstName: 'Robert', lastName: 'Cooper' }
+```

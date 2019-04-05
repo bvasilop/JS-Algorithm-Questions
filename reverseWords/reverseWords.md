@@ -13,91 +13,92 @@
 
             * reversedWord += word[i];
 
+```javascript
+function reverseWords(string) {
 
-'`use strict';`
+    // define reverseWords as a function that takes in a string as a parameter
 
-    function reverseWords(string) {
+    // reverse every word in the string
 
-        // define reverseWords as a function that takes in a string as a parameter
+let wordsArr = string.split(' ');
 
-        // reverse every word in the string
+    // create an array of all the words in our string (on every space character (' '))
 
-    let wordsArr = string.split(' ');
+let reversedWordsArray = [];
 
-        // create an array of all the words in our string (on every space character (' '))
+    // define an empty array to push all of our reversed words into after we have reversed each of them
 
-    let reversedWordsArray = [];
+wordsArr.forEach(word => {
 
-        // define an empty array to push all of our reversed words into after we have reversed each of them
+    // wordsArr.forEach(function(word)) {}
 
-    wordsArr.forEach(word => {
+    // loop through every word in the wordsArr, reverse that word
 
-        // wordsArr.forEach(function(word)) {}
+    // and push it into the new reversedWordsArray using forEach loop.
 
-        // loop through every word in the wordsArr, reverse that word
+    // Now we have access to each word of the array
 
-        // and push it into the new reversedWordsArray using forEach loop.
+let reversedWord = '';
 
-        // Now we have access to each word of the array
+    // first, define an empty string to build our reversed word from
 
-    let reversedWord = '';
+for (let i = word.length -1; i>=0; i--) {
 
-        // first, define an empty string to build our reversed word from
+    // now we want to loop through every word in our string backwards and add it to our empty string
+    using a for loop to go backward instead of forward.
 
-    for (let i = word.length -1; i>=0; i--) {
+    // our loop is starting on the last character in our string and we are moving backward to the first
+    character of the string (index 0)
 
-        // now we want to loop through every word in our string backwards and add it to our empty string
-        using a for loop to go backward instead of forward.
+    // we want to decrement i by 1 on every iteration (i--)
 
-        // our loop is starting on the last character in our string and we are moving backward to the first
-        character of the string (index 0)
+    reversedWord += word[i];
 
-        // we want to decrement i by 1 on every iteration (i--)
+    // inside our loop, we will add (+=) the current letter to our reversed word
+    then we will add a new letter to each string.
 
-        reversedWord += word[i];
+    // That will add the letter at position i (word[i]) to the reversed word
+}
+reversedWordsArray.push(reversedWord);
 
-        // inside our loop, we will add (+=) the current letter to our reversed word
-        then we will add a new letter to each string.
+// outside of the for loop, after all the letters have been added to our reverseWord string, but still
+inside of our forEach loop, we want to push our completed reversedWord string into our reversedWord array
+(reversedWordsArray.push(reversedWord);)
 
-        // That will add the letter at position i (word[i]) to the reversed word
-    }
-    reversedWordsArray.push(reversedWord);
+});
 
-    // outside of the for loop, after all the letters have been added to our reverseWord string, but still
-    inside of our forEach loop, we want to push our completed reversedWord string into our reversedWord array
-    (reversedWordsArray.push(reversedWord);)
+return reversedWordsArray.join(' ');
+// we want to return our final reversedWords array as a string and pass in a space character (' ')
+}
 
-    });
-
-    return reversedWordsArray.join(' ');
-    // we want to return our final reversedWords array as a string and pass in a space character (' ')
-    }
-
-    console.log(reverseWords('this is a string of words'));
+console.log(reverseWords('this is a string of words'));
+```
 
 ## Compressed version of Reverse Words Algorithm
 
-    function reverseWords(string) {
+```javascript
+function reverseWords(string) {
 
-    var wordsArr = string.split(' ');
+var wordsArr = string.split(' ');
 
-    var reversedWordsArr = [];
+var reversedWordsArr = [];
 
-    wordsArr.forEach(word => {
+wordsArr.forEach(word => {
 
-    var reversedWord = '';
+var reversedWord = '';
 
-    for (var i = word.length - 1; i >= 0; i--) {
-        reversedWord += word[i];
+for (var i = word.length - 1; i >= 0; i--) {
+    reversedWord += word[i];
 
-    }
+}
 
-    reversedWordsArr.push(reversedWord);
+reversedWordsArr.push(reversedWord);
 
-    });
+});
 
-    return reversedWordsArr.join(' ');
+return reversedWordsArr.join(' ');
 
-    }
+}
 
-    reverseWords('this is a string of words');
+reverseWords('this is a string of words');
+    ```
