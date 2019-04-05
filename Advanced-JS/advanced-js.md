@@ -240,9 +240,7 @@ function change(a, b) { // created a function that
 
 // this shows us that when we pass a primitive into a function, a simple copy is created
 
-// we can change a as much as we want and we can never affect the variable on the outside
-because it is a primitive but when we pass an object, it's not really the object that we passed
-but instead the reference of the object
+// we can change a as much as we want and we can never affect the variable on the outside because it is a primitive but when we pass an object, it's not really the object that we passed but instead the reference of the object
 
 // We do not pass an object into a function but instead only the reference that points to the object
 
@@ -250,7 +248,6 @@ but instead the reference of the object
 ```
 
 ## First Class Functions: Passing Functions as arguments
-
 
 * A **first class function** is a function that was built with the intention of being passed around to other functions.
 
@@ -288,7 +285,7 @@ return arrRes;
 
 * Callback functions are functions that we pass into functions that will then be called later. In this case fn
 
-```javscript
+```javascript
 function calculateAge(el) { // receives el element and returns back age
     return 2016 - el;
 }
@@ -370,14 +367,12 @@ interviewQuestion('teacher')('Mark'); // different way of calling function
 
 * A **function** cannot be accessed from the outside scope because of the **scoping chain**
 
-
 ```javascript
 function game() {
 var score = Math.random() * 10;
 console.log(score >= 5);
 }
 game();
-
 
 (function() { // first use () parentheses, then write an anonymous function
     var score = Math.random() * 10; // because of IIFE, you cannot access the score variable from the outside
@@ -403,7 +398,6 @@ function () { // If you use it this way as an anonymous function,  the JavaScrip
 ```
 
 ## Closures
-
 
 * An **inner function** always has access to the **variables and parameters** of its **outer function**, even after the outer function has returned.
 
