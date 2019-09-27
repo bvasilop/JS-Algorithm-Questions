@@ -1,4 +1,5 @@
 # Everything is an Object: Inheritance and the Prototype Chain
+
 ## Object-Oriented-Programming
 
 * **Two types of Values :** **Primitives** and **Objects**.
@@ -29,6 +30,7 @@
 * The **original constructor object** is an instance of an even part of a bigger **constructor** with it's own properties.
 
 ### (The Object Object)
+
 * Each object that we create is an **instance** of the **Object Constructor** which **inherits** a bunch of **methods** from the **Object Constructor's properties** (prototype chain).
 
 * **Prototype chain:** Is what makes all of this **inheritance** possible. When we try to **access** a certain **method** or **property** on an **object**, JS will first try to find that method on that exact object. If it cannot be found,
@@ -36,7 +38,6 @@ it will look in the **Object's prototype**, which is the **prototype property** 
 prototypes to look into **(null)**. **Null** is the only one that has no prototype and is therefore the final link in the prototype chain. In this case, **(Undefined)** is returned.
 
 * The **Constructor's prototype property** is **NOT** the **prototype** of the **Constructor** itself, it's the prototype of **ALL** instances that are created through it.
-
 
 ## Creating Objects using the Function Constructor
 
@@ -151,6 +152,7 @@ x.length = 3 because the length property is stored in the array property
 ## Object.create methods
 
 * Another way to create objects that inherit from a prototype
+
 1. define an object that will act as the prototype
 2. create a new object based on that very prototype
 
@@ -205,6 +207,7 @@ console.log(b); // 23*/
 // each of the variables hold their own copy of the data. They do not reference anything.
 ## Objects
 
+```javascript
     var obj1 = {
 	    name: 'John',
 	    age: 26

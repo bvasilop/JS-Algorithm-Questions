@@ -1,17 +1,18 @@
-
 # Reverse Words Algorithm
 
+- Every word in the string should be reversed but the string as a whole should not be reversed
 
-* Every word in the string should be reversed but the string as a whole should not be reversed
-     * ex. 'this is a strong of words' = siht si a gnirts fo sdrow' not 'sdrow fo gnirths a si siht'
+  - ex. 'this is a strong of words' = siht si a gnirts fo sdrow' not 'sdrow fo gnirths a si siht'
 
-* Can't use array reverse method so we can solidify our skills with our array and string manipulation.
-    * We will do this by looping through every letter in our wordArr backwards
+- Can't use array reverse method so we can solidify our skills with our array and string manipulation.
 
-    * for (let i = word.length -1; i>=0; i--) {
-        * using a for loop to go backward instead of forward. then we will add a new letter to each string
+  - We will do this by looping through every letter in our wordArr backwards
 
-            * reversedWord += word[i];
+  - for (let i = word.length -1; i>=0; i--) {
+
+    - using a for loop to go backward instead of forward. then we will add a new letter to each string
+
+      - reversedWord += word[i];
 
 ```javascript
 function reverseWords(string) {
@@ -78,27 +79,22 @@ console.log(reverseWords('this is a string of words'));
 
 ```javascript
 function reverseWords(string) {
+  var wordsArr = string.split(' ');
 
-var wordsArr = string.split(' ');
+  var reversedWordsArr = [];
 
-var reversedWordsArr = [];
+  wordsArr.forEach(word => {
+    var reversedWord = '';
 
-wordsArr.forEach(word => {
+    for (var i = word.length - 1; i >= 0; i--) {
+      reversedWord += word[i];
+    }
 
-var reversedWord = '';
+    reversedWordsArr.push(reversedWord);
+  });
 
-for (var i = word.length - 1; i >= 0; i--) {
-    reversedWord += word[i];
-
-}
-
-reversedWordsArr.push(reversedWord);
-
-});
-
-return reversedWordsArr.join(' ');
-
+  return reversedWordsArr.join(' ');
 }
 
 reverseWords('this is a string of words');
-    ```
+```
