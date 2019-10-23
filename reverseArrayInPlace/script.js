@@ -1,4 +1,4 @@
-/*function reverseArrayInPlace(arr) { // define function passing in array as parameter // reverse arr
+/* function reverseArrayInPlace(arr) { // define function passing in array as parameter // reverse arr
 
     for (let i = 0; i < arr.length / 2; i++) { // first we want to switch the first element of the array with the last element of the array, then we want to switch the second element of our array with the second to last element of the array. // Reason we divide by two is as we go through the first half of the array, we are correctly reassigning each element but then as we continue through the second half of the array we are switching every element back again ex. [1,2,3,4],[4,2,3,1],[4,3,2,1],[1,2,3,4]. That's why we go half way and divide by 2 [4,3,2,1].
 
@@ -22,21 +22,20 @@ console.log(capitalizeFirstLetter(newWords));
 
   /**************************************** */
 
-
 function reverseArrayInPlace(arr) {
-    for (let i = 0; i < arr.length / 2; i++) {
-    let tempVar = arr[i];
+  for (let i = 0; i < arr.length / 2; i++) {
+    const tempVar = arr[i];
     arr[i] = arr[arr.length - 1 - i];
     arr[arr.length - 1 - i] = tempVar;
+  }
+  return arr;
 }
-return arr;
-}
-let words = ['the', 'cow', 'jumped', 'over', 'the', 'moon'];
-let newArrayInPlace = reverseArrayInPlace(words);
-let newWords = newArrayInPlace.join(' ');
+const words = ['the', 'cow', 'jumped', 'over', 'the', 'moon'];
+const newArrayInPlace = reverseArrayInPlace(words);
+const newWords = newArrayInPlace.join(' ');
 
 function capitalizeFirstLetter(newWords) {
-    return newWords.charAt(0).toUpperCase() + newWords.slice(1);
+  return newWords.charAt(0).toUpperCase() + newWords.slice(1);
 }
 
 console.log(capitalizeFirstLetter(newWords)); // Moon the over jumped cow the

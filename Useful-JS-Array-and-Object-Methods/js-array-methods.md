@@ -49,7 +49,32 @@ const total = numbers.reduce(
 // total will be equal to 30
 ```
 
-- There are some really cool use cases for .reduce() outlined in the MDN docs that provide examples on how to do things likes flattening an array of arrays, grouping objects by a property, and removing duplicate items in array.
+### Example
+
+```javascript
+const addNumbers = numbers => {
+  return numbers.reduce((sum, number) => {
+    return sum + number;
+  }, 0);
+};
+addNumbers([1, 2, 3, 4, 5]); //15
+```
+
+### Example
+
+- Using **rest** operator we want to capture all of those arguments and put them into a single array.
+- The **rest** operator is used to gather together variables
+
+```javascript
+const addNumbers = (...numbers) => {
+  return numbers.reduce((sum, number) => {
+    return sum + number;
+  }, 0);
+};
+addNumbers(1, 2, 3, 4, 5); //15
+```
+
+- There are some really cool use cases for **.reduce()** outlined in the MDN docs that provide examples on how to do things likes flattening an array of arrays, grouping objects by a property, and removing duplicate items in array.
 
 ## .forEach()
 
@@ -190,7 +215,7 @@ const entries = Object.entries(weather);
 // [['rain', 0], ['temperature', 24], ['humidity', 33]]
 ```
 
-## Array spread
+## Array spread and rest
 
 - Spreading arrays using the spread operator (…) allows you to expand the elements in an array. It’s useful when concatenating a bunch of arrays together. It’s also a good way to avoid using the splice() method when looking to remove certain elements from an array because it can be combined with the slice() method to prevent direct mutation of an array.
 
@@ -207,6 +232,29 @@ const combined = [...spreadableOne, ...spreadableTwo];
 // combined will be equal to [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
+```javascript
+const defaultColors = ['red', 'green'];
+const userFavoriteColors = ['orange', 'yellow'];
+const fallColors = ['fire red', 'fall orange'];
+
+defaultColors.concat(userFavoriteColors); // using concat method
+
+// same as below
+
+['green', 'blue', ...defaultColors, ...userFavoriteColors, ...fallColors]; // using spread operator
+```
+
+```javascript
+const validateShoppingList = (...items) => {
+  if (items.indexOf('milk') < 0) {
+    // if 'milk' is not in the list then prepend it to array
+    return ['milk', ...items];
+  }
+  return items;
+};
+validateShoppingList('oranges', 'bread', 'eggs'); // ["milk","oranges","bread","eggs"]
+```
+
 - Remove an array element without mutating the original array.
 
 ```javascript
@@ -219,6 +267,21 @@ const mammals = [...animals.slice(0, 3), ...animals.slice(4)];
 ## Object spread
 
 Spreading an object allows for the addition of new properties and values to an object without mutations (i.e. a new object is created) and it can also be used to combine multiple objects together. It should be noted that spreading objects does not do nested copying.
+
+## Object rest
+
+```javascript
+const mathLibrary = {
+  calculateProduct(...rest) {
+    // say you want to change name to multiply
+    console.log('Please use multiply method instead');
+    return this.multiply(...rest); // we do this so we don't have duplicate logic in our code base
+  },
+  multiply(a, b) {
+    return a * b;
+  },
+};
+```
 
 ### Example
 
