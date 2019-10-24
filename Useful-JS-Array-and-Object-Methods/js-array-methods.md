@@ -402,7 +402,7 @@ const combinedObject = Object.assign(firstObject, secondObject);
 
 ### Objects
 
-- When we structure we're pulling objects of properties off of the first object
+- When we destructure we're pulling objects of properties off of the first object
   that is passed in this argument.
 
 ```javascript
@@ -436,4 +436,24 @@ function fileSummary({ name, extension, size }, { type }) {
   return `The file ${type} ${name}.${extension} is of size ${size}`;
 }
 fileSummary(savedFile, { type: 'photo' }); // => 'The file photo repost.jpg is of size 14040'
+```
+
+## Arrays
+
+- To destructure a property, we use the curly braces. To destructure an element, we use the square braces.
+
+```javascript
+const companies = ['Google', 'Facebook', 'Uber'];
+
+const [name, name2, name3] = companies;
+name; // => 'Google' // accesses first element of array
+name2; // => 'Facebook' // accesses second element of array
+name3; // => 'Uber' // accesses third element of array
+
+// used in place of const firstCompany = companies[0]; to access an element of an array
+
+const [name, name2, ...rest] = companies;
+name; // 'Google'
+name2; // 'Facebook'
+rest; // => [ 'Uber' ]
 ```
