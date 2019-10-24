@@ -10,3 +10,4 @@ function twoSum(numArray, sum) {
   // 1. Can be done in O (n^2) time complexity // involves nested loops
   // 2. Can be done in O (n) time complexity // more performing // involves using hash tables
 }
+twoSum([1, 6, 4, 5, 3, 3], 7);
