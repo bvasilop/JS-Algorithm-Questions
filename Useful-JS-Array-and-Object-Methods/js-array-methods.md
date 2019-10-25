@@ -438,7 +438,7 @@ function fileSummary({ name, extension, size }, { type }) {
 fileSummary(savedFile, { type: 'photo' }); // => 'The file photo repost.jpg is of size 14040'
 ```
 
-## Arrays
+### Arrays
 
 - To destructure a property, we use the curly braces. To destructure an element, we use the square braces.
 
@@ -456,4 +456,41 @@ const [name, name2, ...rest] = companies;
 name; // 'Google'
 name2; // 'Facebook'
 rest; // => [ 'Uber' ]
+```
+
+### Objects and Arrays
+
+```javascript
+const companies = [
+  { name: 'Google', location: 'Mountain View' },
+  { name: 'Facebook', location: 'Menlo Park' },
+  { name: 'Uber', location: 'San Francisco' },
+];
+
+// var location = companies[0].location;
+// location; // => 'Mountain View' // Old ES5 way
+
+const [{ location }] = companies; // goes from outside in starting from square braces to curly braces
+// reach into array and give me first element of array
+location; // => 'Mountain View'
+```
+
+```javascript
+const Google = {
+  locations: ['Mountain View', 'New York', 'London'],
+};
+
+// use destructuring to gain access to first element
+
+const { locations } = Google;
+locations; // => [ 'Mountain View', 'New York', 'London' ]
+
+//  look into the object Google, find the locations property and once you find it, pull off the property called where I want you to plot the first element (location) which would be location.
+
+const {
+  locations: [location, location2, location3],
+} = Google;
+location; // => 'Mountain View'
+location2; // => 'New York'
+location3; // => 'London'
 ```
